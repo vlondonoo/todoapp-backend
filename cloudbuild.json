@@ -8,7 +8,6 @@
              "gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA", "."
           ]
        },
-
        {
         "name": "gcr.io/cloud-builders/docker",
         "args": [
@@ -28,5 +27,5 @@
         ]
      }
     ],
-    "images": ["gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA"]
+    "images":["gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA"]
  }
