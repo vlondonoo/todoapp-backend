@@ -23,7 +23,7 @@
            "deploy",
            "todoappbackend",
             "--image",
-            "gcr.io/todoapp-340315/todoappbackend:$COMMIT_SH",
+            "gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA",
              "--region", "us-central1", "--platform", "managed", "--allow-unauthenticated"
         ]
      }
