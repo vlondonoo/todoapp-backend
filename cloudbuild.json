@@ -1,1 +1,31 @@
-[object Object]
+{
+  "steps": [
+     {
+        "name": "gcr.io/cloud-builders/docker",
+        "args": [
+           "build",
+           "-t",
+           "gcr.io/todoapp-340315/veo", "."
+        ]
+     },
+     {
+      "name": "gcr.io/cloud-builders/docker",
+      "args": [
+         "push",
+         "gcr.io/todoapp-340315/veo"
+      ]
+   },
+   {
+      "name": "gcr.io/cloud-builders/gcloud",
+      "args": [
+         "run",
+         "deploy",
+         "todoappbackend",
+          "--image",
+          "gcr.io/todoapp-340315/veo",
+           "--region", "us-central1", "--platform", "managed", "--allow-unauthenticated"
+      ]
+   }
+  ],
+  "images": ["gcr.io/todoapp-340315/veo"]
+}
