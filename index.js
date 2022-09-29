@@ -22,12 +22,6 @@ app.get('/todos', todoController.list);
 app.get('/todos/pending', todoController.pendingTask);
 app.get('/todos/closed', todoController.closedTask);
 /*B-addOrderedRoutes*/
-
-/*Code injected by: OrderbyTitle-alterIndex*/
-app.get('/listOrderedPending/:direction', todoController.listOrderedPending);
-    app.get('/todosOrderedClosed/:direction', todoController.listOrderedClosed);
-/*Code injected by: OrderbyTitle-alterIndex*/
-
 app.post('/todos', todoController.add);
 app.get('/todos/delete/:id', todoController.delete);
 app.get('/todos/update/:id/:state', todoController.update);
