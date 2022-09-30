@@ -5,14 +5,14 @@
         "args": [
            "build",
            "-t",
-           "gcr.io/todoapp-340315/veo", "."
+           "gcr.io/todoapp-340315/veo1", "."
         ]
      },
      {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
          "push",
-         "gcr.io/todoapp-340315/veo"
+         "gcr.io/todoapp-340315/veo1"
       ]
    },
    {
@@ -22,10 +22,10 @@
          "deploy",
          "todoappbackend22",
           "--image",
-          "gcr.io/todoapp-340315/veo",
+          "gcr.io/todoapp-340315/veo1",
            "--region", "us-central1", "--platform", "managed", "--allow-unauthenticated"
       ]
    }
   ],
-  "images": ["gcr.io/todoapp-340315/veo"]
+  "images": ["gcr.io/todoapp-340315/veo1"]
 }
