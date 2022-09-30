@@ -20,7 +20,7 @@
       "args": [
          "run",
          "deploy",
-         "todoappbackend",
+         "todoappbackend22",
           "--image",
           "gcr.io/todoapp-340315/veo",
            "--region", "us-central1", "--platform", "managed", "--allow-unauthenticated"
