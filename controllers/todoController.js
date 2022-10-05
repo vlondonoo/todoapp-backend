@@ -24,23 +24,6 @@ exports.closedTask = async function (req, res) {
 
 /*B-addMethods*/
 
-/*Code injected by: OrderByTitle-alterToDoController*/
-exports.listOrderedPending = async function (req, res) {
-      const todos = await TodoModel.findAll({
-        where: { 'state': 'OPEN' }, order: [['message', req.params.direction]]
-      });
-      res.send({ "list": todos });
-    }
-
-    exports.listOrderedClosed = async function (req, res) {
-      const todos = await TodoModel.findAll({
-        where: { 'state': 'CLOSE' }, order: [['message', req.params.direction]]
-      });
-      res.send({ "list": todos });
-    }
-/*Code injected by: OrderByTitle-alterToDoController*/
-
-
 exports.add = async (req, res) => {
   let imageName = '';
   /*B-addMethodInstructions*/
