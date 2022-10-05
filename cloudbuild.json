@@ -5,14 +5,14 @@
         "args": [
            "build",
            "-t",
-           "gcr.io/todoapp-340315/veo1", "."
+           "gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA", "."
         ]
      },
      {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
          "push",
-         "gcr.io/todoapp-340315/veo1"
+         "gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA"
       ]
    },
    {
@@ -20,12 +20,12 @@
       "args": [
          "run",
          "deploy",
-         "todoappbackend22",
+         "todoappbackend",
           "--image",
-          "gcr.io/todoapp-340315/veo1",
+          "gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA",
            "--region", "us-central1", "--platform", "managed", "--allow-unauthenticated"
       ]
    }
   ],
-  "images": ["gcr.io/todoapp-340315/veo1"]
+  "images": ["gcr.io/todoapp-340315/todoappbackend:$COMMIT_SHA"]
 }
